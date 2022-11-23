@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Linear regression | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 4 Linear regression | YOUR TITLE HERE" />
+  <title>Chapter 4 Linear regression | R and Stats</title>
+  <meta name="description" content="Chapter 4 Linear regression | R and Stats" />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Linear regression | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 4 Linear regression | R and Stats" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Linear regression | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 4 Linear regression | R and Stats" />
   
   
   
 
-<meta name="author" content="YOUR NAME HERE" />
+<meta name="author" content="Excavating Mind" />
 
 
 <meta name="date" content="2022-11-23" />
@@ -72,12 +72,15 @@
 <li><a href="./">SHORT TITLE HERE</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Down the rabbit-hole</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>2</b> The pool of tears</a></li>
 <li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
 <li class="chapter" data-level="4" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>4</b> Linear regression</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="linear-regression.html"><a href="linear-regression.html#mathematical-understanding-of-simple-linear-regression"><i class="fa fa-check"></i><b>4.1</b> Mathematical understanding of simple linear regression</a></li>
+<li class="chapter" data-level="4.1" data-path="linear-regression.html"><a href="linear-regression.html#mathematical-understanding-of-simple-linear-regression"><i class="fa fa-check"></i><b>4.1</b> Mathematical understanding of simple linear regression</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="linear-regression.html"><a href="linear-regression.html#brief-introduction"><i class="fa fa-check"></i><b>4.1.1</b> brief introduction</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="linear-regression.html"><a href="linear-regression.html#in-r"><i class="fa fa-check"></i><b>4.2</b> In R</a></li>
 </ul></li>
 <li class="divider"></li>
@@ -91,7 +94,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R and Stats</a>
           </h1>
         </div>
 
@@ -103,8 +106,19 @@
 <h1><span class="header-section-number">Chapter 4</span> Linear regression<a href="linear-regression.html#linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="mathematical-understanding-of-simple-linear-regression" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Mathematical understanding of simple linear regression<a href="linear-regression.html#mathematical-understanding-of-simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Simple linear regression, or linear regression, is a statistical method that can examine the influence of <strong>one</strong> independent variable on <strong>one</strong> dependent variable.</p>
+<div id="brief-introduction" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> brief introduction<a href="linear-regression.html#brief-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Simple linear regression, or linear regression, is a statistical method that can examine the influence of <strong>one</strong> independent variable on <strong>one</strong> dependent variable. The formula for linear regression is as follows:</p>
 <p><span class="math inline">\(Y = b_{0} + b_{1}X + error\)</span></p>
+<p>While this can look confusing, each component of this equation can be reduced to a simpler explanation.</p>
+<ul>
+<li><span class="math inline">\(Y\)</span> = dependent variable (also known as the outcome variable)</li>
+<li><span class="math inline">\(X\)</span> = independent variable (also known as the predictor variable)</li>
+<li><span class="math inline">\(b_{0}\)</span> = regression constant (also known as the slope)</li>
+<li><span class="math inline">\(b_{1}\)</span> = regression coefficient</li>
+<li><span class="math inline">\(error\)</span> = measure of residuals which is the difference between the predicted and actual values.</li>
+</ul>
+</div>
 </div>
 <div id="in-r" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> In R<a href="linear-regression.html#in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>

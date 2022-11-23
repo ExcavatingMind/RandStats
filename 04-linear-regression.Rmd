@@ -2,9 +2,26 @@
 
 ## Mathematical understanding of simple linear regression
 
+### brief introduction
 
+Simple linear regression, or linear regression, is a statistical method that can examine the influence of **one** independent variable on **one** dependent variable. The formula for linear regression is as follows:
 
 $Y = b_{0} + b_{1}X + error$
+
+While this can look confusing, each component of this equation can be reduced to a simpler explanation. 
+
+- $Y$ = dependent variable (also known as the outcome variable)
+- $X$ = independent variable (also known as the predictor variable)
+- $b_{0}$ = regression constant (also known as the slope)
+- $b_{1}$ = regression coefficient
+- $error$ = measure of residuals which is the difference between the predicted and actual values.
+
+
+
+
+
+
+
 
 
 

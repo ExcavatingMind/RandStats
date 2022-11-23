@@ -1,6 +1,7 @@
-down-the-rabbit-hole
+introduction
 the-pool-of-tears
 a-caucus-race-and-a-long-tale
 linear-regression
 mathematical-understanding-of-simple-linear-regression
+brief-introduction
 in-r
