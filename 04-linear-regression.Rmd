@@ -1,0 +1,13 @@
+# Linear regression
+
+## Mathematical understanding of simple linear regression
+
+Simple linear regression, or linear regression, is a statistical method that can examine the influence of **one** independent variable on **one** dependent variable. 
+
+
+$Y = b_{0} + b_{1}X + error$
+
+
+
+## In R
+
