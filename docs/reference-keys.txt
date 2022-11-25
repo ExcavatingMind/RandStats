@@ -4,4 +4,6 @@ a-caucus-race-and-a-long-tale
 linear-regression
 mathematical-understanding-of-simple-linear-regression
 brief-introduction
+slope
+intercept
 in-r

@@ -23,7 +23,7 @@
 <meta name="author" content="Excavating Mind" />
 
 
-<meta name="date" content="2022-11-23" />
+<meta name="date" content="2022-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -115,13 +179,111 @@
 <li><span class="math inline">\(Y\)</span> = dependent variable (also known as the outcome variable)</li>
 <li><span class="math inline">\(X\)</span> = independent variable (also known as the predictor variable)</li>
 <li><span class="math inline">\(b_{0}\)</span> = regression constant (also known as the slope)</li>
-<li><span class="math inline">\(b_{1}\)</span> = regression coefficient</li>
+<li><span class="math inline">\(b_{1}\)</span> = regression coefficient (also known as the intercept)</li>
 <li><span class="math inline">\(error\)</span> = measure of residuals which is the difference between the predicted and actual values.</li>
 </ul>
+<p>Some of these variables are familiar, e.g., a dependent variable. However, you may wonder what a slope and intercept are.</p>
+<div id="slope" class="section level5 hasAnchor" number="4.1.1.0.1">
+<h5><span class="header-section-number">4.1.1.0.1</span> slope<a href="linear-regression.html#slope" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><span class="math inline">\(b_{1} = \frac{cov_{(x, y)}}{s^2_{x}}\)</span></p>
+<p>Now, let us remember how to calculate covariance</p>
+<p><span class="math inline">\(cov(x,y) = \frac{\sum_i^n(x_i - \overline{x})(y_i - \overline{y})}{n-1}\)</span></p>
+<p>here, each participant calculation is added together and divided by the number of participants minus one.</p>
+<p>In addition, <span class="math inline">\(s^2\)</span> refers to the variance of the independent variable. And here is the formula</p>
+<p><span class="math inline">\(s^2 = \frac{\sum_i^n(x_{i} - \overline{x})^2}{n-1}\)</span></p>
+<p>here, the sum of each participants x variable values (score minus the mean) is summed and divided by the number of participants minus one.</p>
+</div>
+<div id="intercept" class="section level4 hasAnchor" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> intercept<a href="linear-regression.html#intercept" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(b_{0} = \overline{y} - b_{1} \times \overline{x}\)</span></p>
+<p>Simply put, the intercept is the mean of the dependent variable minus the slope multiplied by the mean of the independent variable.</p>
+<p>Thus, to calculate a simple linear regression, the above must be known.</p>
+</div>
 </div>
 </div>
 <div id="in-r" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> In R<a href="linear-regression.html#in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While the theoretical understanding of the simple linear regression is important, it is also advantageous to know how to conduct this in R.</p>
+<p>first, we need to import our libraries needed for this analysis.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="linear-regression.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># main collection of tidy packages including modelr</span></span>
+<span id="cb1-2"><a href="linear-regression.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance) <span class="co"># to test model assumptions</span></span>
+<span id="cb1-3"><a href="linear-regression.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHANES) <span class="co"># dataset</span></span>
+<span id="cb1-4"><a href="linear-regression.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Hmisc) <span class="co"># correlation packages</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="linear-regression.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(NHANES) <span class="co"># examining the NHANES dataset</span></span></code></pre></div>
+<pre><code>## # A tibble: 6 x 76
+##      ID SurveyYr Gender   Age AgeDe~1 AgeMo~2 Race1 Race3 Educa~3 Marit~4 HHInc~5 HHInc~6 Poverty HomeR~7 HomeOwn
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;     &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt; &lt;fct&gt;  
+## 1 51624 2009_10  male      34 &quot; 30-3~     409 White &lt;NA&gt;  High S~ Married 25000-~   30000    1.36       6 Own    
+## 2 51624 2009_10  male      34 &quot; 30-3~     409 White &lt;NA&gt;  High S~ Married 25000-~   30000    1.36       6 Own    
+## 3 51624 2009_10  male      34 &quot; 30-3~     409 White &lt;NA&gt;  High S~ Married 25000-~   30000    1.36       6 Own    
+## 4 51625 2009_10  male       4 &quot; 0-9&quot;       49 Other &lt;NA&gt;  &lt;NA&gt;    &lt;NA&gt;    20000-~   22500    1.07       9 Own    
+## 5 51630 2009_10  female    49 &quot; 40-4~     596 White &lt;NA&gt;  Some C~ LivePa~ 35000-~   40000    1.91       5 Rent   
+## 6 51638 2009_10  male       9 &quot; 0-9&quot;      115 White &lt;NA&gt;  &lt;NA&gt;    &lt;NA&gt;    75000-~   87500    1.84       6 Rent   
+## # ... with 61 more variables: Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;, BMI &lt;dbl&gt;,
+## #   BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;, BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;,
+## #   BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;, BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;, DirectChol &lt;dbl&gt;,
+## #   TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;, UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;,
+## #   DiabetesAge &lt;int&gt;, HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;, LittleInterest &lt;fct&gt;,
+## #   Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;, Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;,
+## #   SleepTrouble &lt;fct&gt;, PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;, ...</code></pre>
+<p>here, we have a lot of continous/integer data; and, we can therefore implement SLR.</p>
+<p>Now, let us see if a regression analysis is worthwhile, one way to do so would be to examine the correlation between variables. Specifically, if a variable is correlated to another variable, we could then predict the value of a variable based on another.</p>
+<p>Here we will do a simple BMI vs weight.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="linear-regression.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rcorr</span>(NHANES<span class="sc">$</span>BMI, NHANES<span class="sc">$</span>Weight)</span></code></pre></div>
+<pre><code>##     x   y
+## x 1.0 0.9
+## y 0.9 1.0
+## 
+## n
+##      x    y
+## x 9634 9634
+## y 9634 9922
+## 
+## P
+##   x  y 
+## x     0
+## y  0</code></pre>
+<p>We can see that BMI and weight are highly correlated, <strong><em>r</em></strong> = .09. We want to see if weight can predict BMI. So lets build some models!
+Typically it is common to build a first model that simply uses the mean of the outcome variable as the predictor and a second model testing our predictor. We can then compare these models and examine whether our predictor model is significantly better than prediction based on mean.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="linear-regression.html#cb6-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(BMI <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> NHANES)</span>
+<span id="cb6-2"><a href="linear-regression.html#cb6-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(BMI <span class="sc">~</span> Weight, <span class="at">data =</span> NHANES)</span></code></pre></div>
+<p>lets test our model assumptions.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="linear-regression.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(model2)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>While not perfect, the assumptions approximately hold up.</p>
+<p>Now, let us see if our model2 is better than our model1</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="linear-regression.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model1, model2)</span></code></pre></div>
+<pre><code>## Analysis of Variance Table
+## 
+## Model 1: BMI ~ 1
+## Model 2: BMI ~ Weight
+##   Res.Df    RSS Df Sum of Sq     F    Pr(&gt;F)    
+## 1   9633 524169                                 
+## 2   9632  97528  1    426641 42136 &lt; 2.2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Here, we can see that our model2 is significantly better <strong><em>p</em></strong> &lt; .001</p>
+<p>now let us summarise our model</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="linear-regression.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = BMI ~ Weight, data = NHANES)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -8.1964 -2.2379 -0.3448  1.8328 23.5453 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 9.093256   0.091514   99.36   &lt;2e-16 ***
+## Weight      0.241376   0.001176  205.27   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.182 on 9632 degrees of freedom
+##   (366 observations deleted due to missingness)
+## Multiple R-squared:  0.8139, Adjusted R-squared:  0.8139 
+## F-statistic: 4.214e+04 on 1 and 9632 DF,  p-value: &lt; 2.2e-16</code></pre>
 
 </div>
 </div>
