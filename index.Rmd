@@ -8,3 +8,15 @@ site: bookdown::bookdown_site
 
 # Introduction 
 
+## Who is this book for?
+This book is designed for psychology students who have an interest in improving their mathematical understanding.
+
+## What is the aim?
+This book, while in continuous development, will constantly add new content to improve students' mathematical understanding of statistics. 
+
+## micro-white paper
+
+If you would like further detail please go to the micro-white paper: https://excavating-mind.netlify.app/post/r-statswhitepaper/rstatswpp/
+
+
+

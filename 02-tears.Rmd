@@ -1,2 +1,69 @@
-# The pool of tears
+# Summary statistics
+
+## Mathmatics
+
+### Mean
+
+The mean is generally presented in statistics as $\overline{X}$. The formula for the mean is:
+
+$\overline{X} = \frac{\sum_i^n{x_i}}{n}$
+
+Essentially, all data points are added together and then divided by the total number of data points.
+
+For example, say you had a dataset of 2, 3, 4, and 7
+
+you would add these together which would equal 16.
+
+Then you would divide 16 by the number of data points (4).
+So, the mean of this dataset would be 4
+
+
+### Median
+
+*to be completed
+
+
+### Variance
+
+*to be completed
+
+
+### Standard deviation
+
+*to be completed
+
+
+# In R
+
+You can work out the mean of a dataset in R in a variety of ways.
+
+```{r}
+mean_dataset <- c(8,9,11,13,14) # lets say we have a dataset
+
+mean_dataset # lets view the data points
+
+8 + 9 + 11 + 13 + 14 # we now know it is 55
+
+55 / 5 # and we now know the mean is 11
+
+
+```
+The above example is fine if you have a few numbers, but what if your dataset is larger?
+Well, you can use certain packages to make this easier
+
+```{r , warning=FALSE, message=FALSE}
+library(tidyverse) # lets load our library
+```
+
+```{r}
+head(mpg) # we are using the mpg dataset that is built into the tidyverse package
+```
+lets say we want to work out the mean year that cars are manufactured
+
+```{r}
+mpg %>% # pipe function
+  summarise(mean_year = mean(year)) # summarise function in dplyr package
+```
+Now we know that the approximate mean year that cars are manufactured is around 2003-04.
+
 
