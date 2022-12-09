@@ -33,7 +33,7 @@ So, the mean of this dataset would be 4
 *to be completed
 
 
-# In R
+## In R
 
 You can work out the mean of a dataset in R in a variety of ways.
 

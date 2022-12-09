@@ -1,6 +1,6 @@
 --- 
 title: "R and Stats"
-subtitle: "A beginners guide by a beginner"
+subtitle: "For Beginners by Beginners"
 author: "Excavating Mind"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
